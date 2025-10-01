@@ -24,6 +24,7 @@ public class DirectoryLister {
         if (files == null || files.length == 0) {
             System.out.println("The directory is empty.");
             return new File[0];
+
         }
 
         Arrays.sort(files, (f1, f2) -> f1.getName().compareToIgnoreCase(f2.getName()));
