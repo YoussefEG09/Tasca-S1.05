@@ -1,8 +1,6 @@
 package Level1.ex2;
 
 
-import Level1.ex1.DirectoryPrinter;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -13,8 +11,7 @@ public class Main {
             return;
         }
 
-        DirectoryLister.listFilesAlphabetically(args[0]);
-
-
+        File[] orderedFiles = DirectoryLister.listFilesAlphabetically(args[0]);
+        DirectoryPrinter.printFilesName(orderedFiles);
     }
 }
